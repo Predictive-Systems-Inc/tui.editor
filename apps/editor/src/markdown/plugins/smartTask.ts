@@ -1,9 +1,10 @@
-import { Plugin } from 'prosemirror-state';
+import { getNodeContentOffsetRange, getRangeInfo } from '../helper/pos';
+
 import { EditorView } from 'prosemirror-view';
-import { MdPos } from '@toast-ui/toastmark';
 import { MdContext } from '@t/spec';
+import { MdPos } from '@predictive-systems/toastmark';
+import { Plugin } from 'prosemirror-state';
 import { findClosestNode } from '@/utils/markdown';
-import { getRangeInfo, getNodeContentOffsetRange } from '../helper/pos';
 
 const reTaskMarkerKey = /x|backspace/i;
 const reTaskMarker = /^\[(\s*)(x?)(\s*)\](?:\s+)/i;

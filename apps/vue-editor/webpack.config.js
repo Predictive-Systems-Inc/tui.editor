@@ -18,13 +18,13 @@ module.exports = {
     },
   },
   externals: {
-    '@toast-ui/editor': {
-      commonjs: '@toast-ui/editor',
-      commonjs2: '@toast-ui/editor',
+    '@predictive-systems/editor': {
+      commonjs: '@predictive-systems/editor',
+      commonjs2: '@predictive-systems/editor',
     },
-    '@toast-ui/editor/dist/toastui-editor-viewer': {
-      commonjs: '@toast-ui/editor/dist/toastui-editor-viewer',
-      commonjs2: '@toast-ui/editor/dist/toastui-editor-viewer',
+    '@predictive-systems/editor/dist/toastui-editor-viewer': {
+      commonjs: '@predictive-systems/editor/dist/toastui-editor-viewer',
+      commonjs2: '@predictive-systems/editor/dist/toastui-editor-viewer',
     },
   },
   module: {

@@ -1,12 +1,13 @@
+import { TestEditorWithNoneDelayHistory, getTextContent, removeDataAttr } from './util';
 import { oneLineTrim, source, stripIndent } from 'common-tags';
-import { undo } from 'prosemirror-history';
-import { ToastMark } from '@toast-ui/toastmark';
+
+import CommandManager from '@/commands/commandManager';
+import EventEmitter from '@/event/eventEmitter';
 import MarkdownEditor from '@/markdown/mdEditor';
 import MarkdownPreview from '@/markdown/mdPreview';
-import EventEmitter from '@/event/eventEmitter';
+import { ToastMark } from '@predictive-systems/toastmark';
 import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
-import CommandManager from '@/commands/commandManager';
-import { getTextContent, TestEditorWithNoneDelayHistory, removeDataAttr } from './util';
+import { undo } from 'prosemirror-history';
 
 let mde: MarkdownEditor, em: EventEmitter, cmd: CommandManager, preview: MarkdownPreview;
 

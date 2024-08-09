@@ -1,12 +1,13 @@
+import { CodeBlockMdNode, HTMLConvertorMap, HeadingMdNode } from '@predictive-systems/toastmark';
 import { Fragment, ProsemirrorNode } from 'prosemirror-model';
-import { oneLineTrim } from 'common-tags';
-import { HeadingMdNode, CodeBlockMdNode, HTMLConvertorMap } from '@toast-ui/toastmark';
+
+import EventEmitter from '@/event/eventEmitter';
 import { ToDOMAdaptor } from '@t/convertor';
 import { WwToDOMAdaptor } from '@/wysiwyg/adaptor/wwToDOMAdaptor';
-import EventEmitter from '@/event/eventEmitter';
 import WysiwygEditor from '@/wysiwyg/wwEditor';
-import { createMdLikeNode } from '@/wysiwyg/adaptor/mdLikeNode';
 import { createHTMLSchemaMap } from '@/wysiwyg/nodes/html';
+import { createMdLikeNode } from '@/wysiwyg/adaptor/mdLikeNode';
+import { oneLineTrim } from 'common-tags';
 import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
 
 let wwe: WysiwygEditor, em: EventEmitter, toDOMAdaptor: ToDOMAdaptor;

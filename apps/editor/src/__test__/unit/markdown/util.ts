@@ -1,6 +1,6 @@
-import { HTMLConvertorMap } from '@toast-ui/toastmark';
-import { history } from 'prosemirror-history';
+import { HTMLConvertorMap } from '@predictive-systems/toastmark';
 import MarkdownEditor from '@/markdown/mdEditor';
+import { history } from 'prosemirror-history';
 
 export function getTextContent(editor: MarkdownEditor) {
   const { doc } = editor.view.state;

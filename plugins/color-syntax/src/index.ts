@@ -1,11 +1,12 @@
+import './css/plugin.css';
+
+import type { HTMLMdNode, I18n, PluginContext, PluginInfo } from '@predictive-systems/editor';
+import type { Selection, TextSelection, Transaction } from 'prosemirror-state';
+
 import ColorPicker from 'tui-color-picker';
-import type { Context } from '@toast-ui/toastmark';
-import type { PluginContext, PluginInfo, HTMLMdNode, I18n } from '@toast-ui/editor';
-import type { Transaction, Selection, TextSelection } from 'prosemirror-state';
+import type { Context } from '@predictive-systems/toastmark';
 import { PluginOptions } from '@t/index';
 import { addLangs } from './i18n/langs';
-
-import './css/plugin.css';
 import { findParentByClassName } from './utils/dom';
 
 const PREFIX = 'toastui-editor-';

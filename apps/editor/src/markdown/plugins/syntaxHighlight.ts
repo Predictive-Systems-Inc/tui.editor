@@ -1,11 +1,12 @@
-import { MdNode, MdPos, EditResult, ToastMark } from '@toast-ui/toastmark';
-import { Plugin, Transaction } from 'prosemirror-state';
+import { EditResult, MdNode, MdPos, ToastMark } from '@predictive-systems/toastmark';
+import { MarkInfo, getMarkInfo } from './helper/markInfo';
 import { NodeType, ProsemirrorNode, Schema } from 'prosemirror-model';
-import { MdContext } from '@t/spec';
-import { getMdStartLine, getMdEndLine, getMdStartCh, getMdEndCh } from '@/utils/markdown';
-import { includes, last } from '@/utils/common';
+import { Plugin, Transaction } from 'prosemirror-state';
+import { getMdEndCh, getMdEndLine, getMdStartCh, getMdStartLine } from '@/utils/markdown';
 import { getStartPosListPerLine, getWidgetNodePos } from '@/markdown/helper/pos';
-import { getMarkInfo, MarkInfo } from './helper/markInfo';
+import { includes, last } from '@/utils/common';
+
+import { MdContext } from '@t/spec';
 
 interface CodeBlockPos {
   codeStart: number;

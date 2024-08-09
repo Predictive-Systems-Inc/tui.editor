@@ -1,6 +1,7 @@
-import React from 'react';
-import Editor, { EventMap } from '@toast-ui/editor';
+import Editor, { EventMap } from '@predictive-systems/editor';
 import type { EditorProps, EventNames } from '../index';
+
+import React from 'react';
 
 export default class extends React.Component<EditorProps> {
   rootEl = React.createRef<HTMLDivElement>();

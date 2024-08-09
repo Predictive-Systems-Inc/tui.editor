@@ -1,14 +1,15 @@
-import { DOMOutputSpec } from 'prosemirror-model';
-import { Command } from 'prosemirror-commands';
-import type { Transaction } from 'prosemirror-state';
-import { TableCellMdNode, MdNode, MdPos } from '@toast-ui/toastmark';
 import { EditorCommand, MdSpecContext } from '@t/spec';
-import { TableRowMdNode } from '@t/markdown';
-import { clsWithMdPrefix } from '@/utils/dom';
-import { findClosestNode, getMdEndCh, isTableCellNode } from '@/utils/markdown';
-import Mark from '@/spec/mark';
-import { getRangeInfo } from '../helper/pos';
+import { MdNode, MdPos, TableCellMdNode } from '@predictive-systems/toastmark';
 import { createTextNode, createTextSelection } from '@/helper/manipulation';
+import { findClosestNode, getMdEndCh, isTableCellNode } from '@/utils/markdown';
+
+import { Command } from 'prosemirror-commands';
+import { DOMOutputSpec } from 'prosemirror-model';
+import Mark from '@/spec/mark';
+import { TableRowMdNode } from '@t/markdown';
+import type { Transaction } from 'prosemirror-state';
+import { clsWithMdPrefix } from '@/utils/dom';
+import { getRangeInfo } from '../helper/pos';
 import { getTextContent } from '../helper/query';
 
 interface Payload {

@@ -1,16 +1,17 @@
+import { ATTRIBUTE, reHTMLTag } from '@/utils/constants';
+import { CustomHTMLRenderer, HTMLSchemaMap, Sanitizer } from '@t/editor';
 import {
-  ProsemirrorNode,
-  Mark as ProsemirrorMark,
   DOMOutputSpec,
-  NodeSpec,
   MarkSpec,
+  NodeSpec,
+  Mark as ProsemirrorMark,
+  ProsemirrorNode,
 } from 'prosemirror-model';
-import { MdNode } from '@toast-ui/toastmark';
-import toArray from 'tui-code-snippet/collection/toArray';
-import { Sanitizer, HTMLSchemaMap, CustomHTMLRenderer } from '@t/editor';
+
+import { MdNode } from '@predictive-systems/toastmark';
 import { ToDOMAdaptor } from '@t/convertor';
 import { registerTagWhitelistIfPossible } from '@/sanitizer/htmlSanitizer';
-import { reHTMLTag, ATTRIBUTE } from '@/utils/constants';
+import toArray from 'tui-code-snippet/collection/toArray';
 
 export function getChildrenHTML(node: MdNode, typeName: string) {
   return node

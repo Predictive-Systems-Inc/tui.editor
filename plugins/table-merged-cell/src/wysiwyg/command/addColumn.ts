@@ -1,7 +1,8 @@
-import type { PluginContext } from '@toast-ui/editor';
-import type { TableOffsetMapFactory, TableOffsetMap, CommandFn, SelectionInfo } from '@t/index';
+import type { CommandFn, SelectionInfo, TableOffsetMap, TableOffsetMapFactory } from '@t/index';
 import { createDummyCells, getResolvedSelection, getRowAndColumnCount, setAttrs } from '../util';
+
 import { Direction } from './direction';
+import type { PluginContext } from '@predictive-systems/editor';
 
 type ColDirection = Direction.LEFT | Direction.RIGHT;
 

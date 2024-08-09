@@ -1,12 +1,12 @@
-import css from 'tui-code-snippet/domUtil/css';
-import addClass from 'tui-code-snippet/domUtil/addClass';
-import removeClass from 'tui-code-snippet/domUtil/removeClass';
-import hasClass from 'tui-code-snippet/domUtil/hasClass';
-import toArray from 'tui-code-snippet/collection/toArray';
-import inArray from 'tui-code-snippet/array/inArray';
+import { cls, isPositionInBox, removeNode } from '@/utils/dom';
 
-import { isPositionInBox, removeNode, cls } from '@/utils/dom';
-import type { Emitter } from '@toast-ui/editor';
+import type { Emitter } from '@predictive-systems/editor';
+import addClass from 'tui-code-snippet/domUtil/addClass';
+import css from 'tui-code-snippet/domUtil/css';
+import hasClass from 'tui-code-snippet/domUtil/hasClass';
+import inArray from 'tui-code-snippet/array/inArray';
+import removeClass from 'tui-code-snippet/domUtil/removeClass';
+import toArray from 'tui-code-snippet/collection/toArray';
 
 export const WRAPPER_CLASS_NAME = 'code-block-language';
 export const INPUT_CLASS_NANE = 'code-block-language-input';

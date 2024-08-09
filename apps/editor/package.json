@@ -1,18 +1,11 @@
 {
-  "name": "@toast-ui/editor",
-  "version": "3.2.2",
-  "description": "GFM  Markdown Wysiwyg Editor - Productive and Extensible",
+  "name": "@predictive-systems/editor",
+  "version": "0.0.4",
+  "description": "Markdown Wysiwyg Editor",
   "keywords": [
-    "nhn",
-    "nhn cloud",
-    "toast",
-    "toastui",
-    "toast-ui",
     "markdown",
     "wysiwyg",
-    "editor",
-    "preview",
-    "gfm"
+    "editor"
   ],
   "main": "dist/toastui-editor.js",
   "module": "dist/esm/",
@@ -77,7 +70,6 @@
     "doc": "npm run ts2js && tuidoc"
   },
   "devDependencies": {
-    "@toast-ui/release-notes": "^2.0.1",
     "@types/dompurify": "2.3.3",
     "cross-env": "^6.0.3"
   },

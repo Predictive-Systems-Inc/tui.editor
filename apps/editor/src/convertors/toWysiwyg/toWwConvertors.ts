@@ -1,34 +1,32 @@
 import {
-  MdNode,
-  HeadingMdNode,
   CodeBlockMdNode,
-  ListItemMdNode,
-  LinkMdNode,
-  TableCellMdNode,
   CustomBlockMdNode,
   CustomInlineMdNode,
-  TableMdNode,
   HTMLConvertorMap,
+  HeadingMdNode,
+  LinkMdNode,
+  ListItemMdNode,
+  MdNode,
   OpenTagToken,
   Renderer,
-} from '@toast-ui/toastmark';
-import toArray from 'tui-code-snippet/collection/toArray';
-
-import { isElemNode } from '@/utils/dom';
-
-import {
-  htmlToWwConvertors,
-  getTextWithoutTrailingNewline,
-  isInlineNode,
-  isCustomHTMLInlineNode,
-} from './htmlToWwConvertors';
-
-import { ToWwConvertorMap } from '@t/convertor';
+  TableCellMdNode,
+  TableMdNode,
+} from '@predictive-systems/toastmark';
 import { createWidgetContent, getWidgetContent } from '@/widget/rules';
 import { getChildrenHTML, getHTMLAttrsByHTMLString } from '@/wysiwyg/nodes/html';
+import {
+  getTextWithoutTrailingNewline,
+  htmlToWwConvertors,
+  isCustomHTMLInlineNode,
+  isInlineNode,
+} from './htmlToWwConvertors';
+import { reBR, reHTMLComment, reHTMLTag } from '@/utils/constants';
+
+import { ToWwConvertorMap } from '@t/convertor';
 import { includes } from '@/utils/common';
-import { reBR, reHTMLTag, reHTMLComment } from '@/utils/constants';
+import { isElemNode } from '@/utils/dom';
 import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
+import toArray from 'tui-code-snippet/collection/toArray';
 
 function isBRTag(node: MdNode) {
   return node.type === 'htmlInline' && reBR.test(node.literal!);

@@ -1,5 +1,6 @@
-import type { CustomParserMap } from '@toast-ui/toastmark';
-import { MergedTableRowMdNode, MergedTableCellMdNode, SpanType } from '@t/index';
+import { MergedTableCellMdNode, MergedTableRowMdNode, SpanType } from '@t/index';
+
+import type { CustomParserMap } from '@predictive-systems/toastmark';
 
 interface Attrs {
   colspan?: number;

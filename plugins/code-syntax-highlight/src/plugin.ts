@@ -1,11 +1,10 @@
-import isFunction from 'tui-code-snippet/type/isFunction';
+import type { PluginContext, PluginInfo } from '@predictive-systems/editor';
 
-import { getHTMLRenderers } from '@/renderers/toHTMLRenderers';
+import { PluginOptions } from '@t/index';
 import { codeSyntaxHighlighting } from '@/plugins/codeSyntaxHighlighting';
 import { createCodeSyntaxHighlightView } from '@/nodeViews/codeSyntaxHighlightView';
-
-import type { PluginContext, PluginInfo } from '@toast-ui/editor';
-import { PluginOptions } from '@t/index';
+import { getHTMLRenderers } from '@/renderers/toHTMLRenderers';
+import isFunction from 'tui-code-snippet/type/isFunction';
 
 export function codeSyntaxHighlightPlugin(
   context: PluginContext,

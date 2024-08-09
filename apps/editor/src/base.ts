@@ -1,25 +1,26 @@
-import { Schema } from 'prosemirror-model';
-import { EditorState, Plugin, Transaction } from 'prosemirror-state';
-import { EditorView } from 'prosemirror-view';
-import { keymap } from 'prosemirror-keymap';
-import { baseKeymap } from 'prosemirror-commands';
-import { InputRule, inputRules } from 'prosemirror-inputrules';
-import { history } from 'prosemirror-history';
-import { Sourcepos } from '@toast-ui/toastmark';
-import css from 'tui-code-snippet/domUtil/css';
-import { WidgetStyle, EditorType, EditorPos, Base, NodeRangeInfo } from '@t/editor';
-import { Emitter } from '@t/event';
+import { Base, EditorPos, EditorType, NodeRangeInfo, WidgetStyle } from '@t/editor';
 import { Context, EditorAllCommandMap } from '@t/spec';
-import SpecManager from './spec/specManager';
-import { createTextSelection } from './helper/manipulation';
+import { EditorState, Plugin, Transaction } from 'prosemirror-state';
+import { InputRule, inputRules } from 'prosemirror-inputrules';
 import { createNodesWithWidget, getWidgetRules } from './widget/rules';
-import { getDefaultCommands } from './commands/defaultCommands';
-import { placeholder } from './plugins/placeholder';
-import { addWidget } from './plugins/popupWidget';
-import { dropImage } from './plugins/dropImage';
-import { isWidgetNode } from './widget/widgetNode';
-import { last } from './utils/common';
+
+import { EditorView } from 'prosemirror-view';
+import { Emitter } from '@t/event';
 import { PluginProp } from '@t/plugin';
+import { Schema } from 'prosemirror-model';
+import { Sourcepos } from '@predictive-systems/toastmark';
+import SpecManager from './spec/specManager';
+import { addWidget } from './plugins/popupWidget';
+import { baseKeymap } from 'prosemirror-commands';
+import { createTextSelection } from './helper/manipulation';
+import css from 'tui-code-snippet/domUtil/css';
+import { dropImage } from './plugins/dropImage';
+import { getDefaultCommands } from './commands/defaultCommands';
+import { history } from 'prosemirror-history';
+import { isWidgetNode } from './widget/widgetNode';
+import { keymap } from 'prosemirror-keymap';
+import { last } from './utils/common';
+import { placeholder } from './plugins/placeholder';
 
 export default abstract class EditorBase implements Base {
   el: HTMLElement;

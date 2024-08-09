@@ -18,25 +18,27 @@
  * y.title: Month              => yAxis.title
  * $$
  */
-import type { PluginInfo, MdNode, PluginContext } from '@toast-ui/editor';
+
 import Chart, {
-  BaseOptions,
-  LineChart,
   AreaChart,
   BarChart,
-  PieChart,
+  BaseOptions,
   ColumnChart,
-} from '@toast-ui/chart';
-import isString from 'tui-code-snippet/type/isString';
-import isUndefined from 'tui-code-snippet/type/isUndefined';
-import inArray from 'tui-code-snippet/array/inArray';
-import extend from 'tui-code-snippet/object/extend';
-// @ts-ignore
-import ajax from 'tui-code-snippet/ajax/index.js';
+  LineChart,
+  PieChart,
+} from '@predictive-systems/chart';
+import type { MdNode, PluginContext, PluginInfo } from '@predictive-systems/editor';
+import { clamp, isNumeric, trimKeepingTabs } from './util';
 
 import { PluginOptions } from '@t/index';
+import ajax from 'tui-code-snippet/ajax/index.js';
 import csv from './csv';
-import { trimKeepingTabs, isNumeric, clamp } from './util';
+import extend from 'tui-code-snippet/object/extend';
+import inArray from 'tui-code-snippet/array/inArray';
+import isString from 'tui-code-snippet/type/isString';
+import isUndefined from 'tui-code-snippet/type/isUndefined';
+
+// @ts-ignore
 
 // csv configuration
 csv.IGNORE_QUOTE_WHITESPACE = false;

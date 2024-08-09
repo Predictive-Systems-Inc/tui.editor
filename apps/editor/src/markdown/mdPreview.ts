@@ -1,12 +1,5 @@
-import off from 'tui-code-snippet/domEvent/off';
-import addClass from 'tui-code-snippet/domUtil/addClass';
-import removeClass from 'tui-code-snippet/domUtil/removeClass';
-import on from 'tui-code-snippet/domEvent/on';
-import css from 'tui-code-snippet/domUtil/css';
-import { EditResult, MdNode, MdPos, Renderer } from '@toast-ui/toastmark';
-
-import { Emitter } from '@t/event';
 import { CustomHTMLRenderer, LinkAttributes } from '@t/editor';
+import { EditResult, MdNode, MdPos, Renderer } from '@predictive-systems/toastmark';
 import {
   cls,
   createElementWith,
@@ -14,9 +7,16 @@ import {
   removeProseMirrorHackNodes,
   toggleClass,
 } from '@/utils/dom';
-import { getHTMLRenderConvertors } from '@/markdown/htmlRenderConvertors';
-import { isInlineNode, findClosestNode, getMdStartCh } from '@/utils/markdown';
+import { findClosestNode, getMdStartCh, isInlineNode } from '@/utils/markdown';
+
+import { Emitter } from '@t/event';
+import addClass from 'tui-code-snippet/domUtil/addClass';
+import css from 'tui-code-snippet/domUtil/css';
 import { findAdjacentElementToScrollTop } from './scroll/dom';
+import { getHTMLRenderConvertors } from '@/markdown/htmlRenderConvertors';
+import off from 'tui-code-snippet/domEvent/off';
+import on from 'tui-code-snippet/domEvent/on';
+import removeClass from 'tui-code-snippet/domUtil/removeClass';
 import { removeOffsetInfoByNode } from './scroll/offset';
 
 export const CLASS_HIGHLIGHT = cls('md-preview-highlight');

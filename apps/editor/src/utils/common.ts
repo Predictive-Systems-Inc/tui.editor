@@ -1,9 +1,9 @@
-import isUndefined from 'tui-code-snippet/type/isUndefined';
-import isNull from 'tui-code-snippet/type/isNull';
-import sendHostname from 'tui-code-snippet/request/sendHostname';
-import forEachOwnProperties from 'tui-code-snippet/collection/forEachOwnProperties';
-
 import { LinkAttributeNames, LinkAttributes } from '@t/editor';
+
+import forEachOwnProperties from 'tui-code-snippet/collection/forEachOwnProperties';
+import isNull from 'tui-code-snippet/type/isNull';
+import isUndefined from 'tui-code-snippet/type/isUndefined';
+import sendHostname from 'tui-code-snippet/request/sendHostname';
 
 export const isMac = /Mac/.test(navigator.platform);
 const reSpaceMoreThanOne = /[\u0020]+/g;

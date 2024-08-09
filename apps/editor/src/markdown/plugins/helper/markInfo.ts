@@ -1,23 +1,24 @@
 import {
-  MdNodeType,
-  MdPos,
+  CodeBlockMdNode,
+  CodeMdNode,
+  CustomBlockMdNode,
   HeadingMdNode,
   LinkMdNode,
-  CodeMdNode,
-  MdNode,
-  CodeBlockMdNode,
-  CustomBlockMdNode,
   ListItemMdNode,
-} from '@toast-ui/toastmark';
-import isFunction from 'tui-code-snippet/type/isFunction';
+  MdNode,
+  MdNodeType,
+  MdPos,
+} from '@predictive-systems/toastmark';
 import {
-  getMdStartLine,
-  getMdStartCh,
-  getMdEndLine,
-  getMdEndCh,
   addOffsetPos,
+  getMdEndCh,
+  getMdEndLine,
+  getMdStartCh,
+  getMdStartLine,
   setOffsetPos,
 } from '@/utils/markdown';
+
+import isFunction from 'tui-code-snippet/type/isFunction';
 
 const HEADING = 'heading';
 const BLOCK_QUOTE = 'blockQuote';

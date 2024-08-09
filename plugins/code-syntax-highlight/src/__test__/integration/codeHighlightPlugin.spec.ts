@@ -1,10 +1,9 @@
-import { source } from 'common-tags';
-
-import Editor from '@toast-ui/editor';
-import codeSyntaxHighlightPlugin from '@/index';
-
-import Prism from 'prismjs';
 import 'prismjs/components/prism-yaml.js';
+
+import Editor from '@predictive-systems/editor';
+import Prism from 'prismjs';
+import codeSyntaxHighlightPlugin from '@/index';
+import { source } from 'common-tags';
 
 describe('codeSyntaxHighlightPlugin', () => {
   let container: HTMLElement, mdPreview: HTMLElement, wwEditor: HTMLElement, editor: Editor;

@@ -1,6 +1,7 @@
 import { AllSelection, Selection } from 'prosemirror-state';
+import { MdPos, Sourcepos } from '@predictive-systems/toastmark';
 import { ProsemirrorNode, ResolvedPos } from 'prosemirror-model';
-import { Sourcepos, MdPos } from '@toast-ui/toastmark';
+
 import { isWidgetNode } from '@/widget/widgetNode';
 
 export function resolveSelectionPos(selection: Selection) {

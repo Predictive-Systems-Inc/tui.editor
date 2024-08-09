@@ -1,9 +1,11 @@
-import { MdPos, ToastMark } from '@toast-ui/toastmark';
-import MarkdownPreview, { CLASS_HIGHLIGHT } from '@/markdown/mdPreview';
-import MarkdownEditor from '@/markdown/mdEditor';
-import EventEmitter from '@/event/eventEmitter';
 import * as sanitizer from '@/sanitizer/htmlSanitizer';
+
+import MarkdownPreview, { CLASS_HIGHLIGHT } from '@/markdown/mdPreview';
+import { MdPos, ToastMark } from '@predictive-systems/toastmark';
 import { createHTMLrenderer, removeDataAttr } from './util';
+
+import EventEmitter from '@/event/eventEmitter';
+import MarkdownEditor from '@/markdown/mdEditor';
 
 function getHTML(preview: MarkdownPreview) {
   return removeDataAttr(preview.getHTML());

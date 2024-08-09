@@ -1,8 +1,9 @@
-import { MdNode, MdPos } from '@toast-ui/toastmark';
-import { Plugin } from 'prosemirror-state';
+import { MdNode, MdPos } from '@predictive-systems/toastmark';
+import { ToolbarStateKeys, ToolbarStateMap } from '@t/ui';
+import { isListNode, traverseParentNodes } from '@/utils/markdown';
+
 import { MdContext } from '@t/spec';
-import { ToolbarStateMap, ToolbarStateKeys } from '@t/ui';
-import { traverseParentNodes, isListNode } from '@/utils/markdown';
+import { Plugin } from 'prosemirror-state';
 import { includes } from '@/utils/common';
 
 const defaultToolbarStateKeys: ToolbarStateKeys[] = [

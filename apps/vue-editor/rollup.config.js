@@ -1,9 +1,11 @@
+import * as ts from 'typescript';
+
+import { author, license, version } from './package.json';
+
+import banner from 'rollup-plugin-banner';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import vue from 'rollup-plugin-vue';
-import banner from 'rollup-plugin-banner';
-import * as ts from 'typescript';
-import { version, author, license } from './package.json';
 
 function transpile() {
   return {
@@ -38,6 +40,6 @@ export default [
       sourcemap: false,
     },
     plugins: [vue({}), commonjs(), nodeResolve(), transpile(), banner(bannerText)],
-    external: ['vue', '@toast-ui/editor', '@toast-ui/editor/dist/toastui-editor-viewer'],
+    external: ['vue', '@predictive-systems/editor', '@predictive-systems/editor/dist/toastui-editor-viewer'],
   },
 ];

@@ -1,6 +1,7 @@
-import { oneLineTrim } from 'common-tags';
-import Editor from '@toast-ui/editor';
 import { assertWYSIWYGHTML, createEditor } from './helper/utils';
+
+import Editor from '@predictive-systems/editor';
+import { oneLineTrim } from 'common-tags';
 
 let container: HTMLElement, editor: Editor;
 

@@ -1,6 +1,7 @@
-import { Schema, ProsemirrorNode } from 'prosemirror-model';
-import { CustomInlineMdNode } from '@toast-ui/toastmark';
+import { ProsemirrorNode, Schema } from 'prosemirror-model';
 import { WidgetRule, WidgetRuleMap } from '@t/editor';
+
+import { CustomInlineMdNode } from '@predictive-systems/toastmark';
 import { getInlineMarkdownText } from '@/utils/markdown';
 
 let widgetRules: WidgetRule[] = [];

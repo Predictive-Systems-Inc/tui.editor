@@ -1,12 +1,9 @@
-import type { Node as ProsemirrorNode } from 'prosemirror-model';
 import type { Decoration } from 'prosemirror-view';
-
-import isString from 'tui-code-snippet/type/isString';
-
-import { flatten } from '@/utils/common';
-
-import type { PluginContext } from '@toast-ui/editor';
+import type { PluginContext } from '@predictive-systems/editor';
 import { PrismJs } from '@t/index';
+import type { Node as ProsemirrorNode } from 'prosemirror-model';
+import { flatten } from '@/utils/common';
+import isString from 'tui-code-snippet/type/isString';
 
 interface ChildNodeInfo {
   node: ProsemirrorNode;

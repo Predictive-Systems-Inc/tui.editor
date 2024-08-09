@@ -1,6 +1,7 @@
 import { Component as IComponent, VNode } from '@t/ui';
-import { shallowEqual } from '@/utils/common';
+
 import { rerender } from './renderer';
+import { shallowEqual } from '@/utils/common';
 
 export abstract class Component<T = {}, R = {}> implements IComponent<T, R> {
   props: T;

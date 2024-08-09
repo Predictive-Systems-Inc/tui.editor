@@ -1,8 +1,9 @@
-import typescript from '@rollup/plugin-typescript';
+import { author, license, version } from './package.json';
+
+import banner from 'rollup-plugin-banner';
 import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import banner from 'rollup-plugin-banner';
-import { version, author, license } from './package.json';
+import typescript from '@rollup/plugin-typescript';
 
 const bannerText = [
   'TOAST UI Editor : React Wrapper',
@@ -20,6 +21,10 @@ export default [
       sourcemap: false,
     },
     plugins: [typescript(), commonjs(), nodeResolve(), banner(bannerText)],
-    external: ['react', '@toast-ui/editor', '@toast-ui/editor/dist/toastui-editor-viewer'],
+    external: [
+      'react',
+      '@predictive-systems/editor',
+      '@predictive-systems/editor/dist/toastui-editor-viewer',
+    ],
   },
 ];

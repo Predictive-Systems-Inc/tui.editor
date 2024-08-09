@@ -1,6 +1,7 @@
-import { MdNodeType } from '@toast-ui/toastmark';
 import { Mark, Node as ProsemirrorNode } from 'prosemirror-model';
+
 import { MdLikeNode } from '@t/markdown';
+import { MdNodeType } from '@predictive-systems/toastmark';
 import { includes } from '@/utils/common';
 
 export function isPmNode(node: ProsemirrorNode | Mark): node is ProsemirrorNode {

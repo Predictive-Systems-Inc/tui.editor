@@ -1,7 +1,8 @@
+import { getMdEndLine, getMdStartLine, isStyledInlineNode } from '@/utils/markdown';
+
+import { MdNode } from '@predictive-systems/toastmark';
 import { ProsemirrorNode } from 'prosemirror-model';
-import { MdNode } from '@toast-ui/toastmark';
 import { includes } from '@/utils/common';
-import { isStyledInlineNode, getMdEndLine, getMdStartLine } from '@/utils/markdown';
 
 type El = HTMLElement | null;
 

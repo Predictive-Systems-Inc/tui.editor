@@ -1,6 +1,7 @@
+import { EventNames, ViewerProps } from '../index';
+import Viewer, { EventMap } from '@predictive-systems/editor/dist/toastui-editor-viewer';
+
 import React from 'react';
-import Viewer, { EventMap } from '@toast-ui/editor/dist/toastui-editor-viewer';
-import { ViewerProps, EventNames } from '../index';
 
 export default class ViewerComponent extends React.Component<ViewerProps> {
   rootEl = React.createRef<HTMLDivElement>();

@@ -1,12 +1,12 @@
-import type { PluginContext } from '@toast-ui/editor';
+import { Direction } from './command/direction';
+import type { PluginContext } from '@predictive-systems/editor';
 import type { TableOffsetMapFactory } from '@t/index';
+import { createAddColumnCommand } from './command/addColumn';
+import { createAddRowCommand } from './command/addRow';
 import { createMergeCellsCommand } from './command/mergeCells';
-import { createSplitCellsCommand } from './command/splitCells';
 import { createRemoveColumnCommand } from './command/removeColumn';
 import { createRemoveRowCommand } from './command/removeRow';
-import { createAddRowCommand } from './command/addRow';
-import { createAddColumnCommand } from './command/addColumn';
-import { Direction } from './command/direction';
+import { createSplitCellsCommand } from './command/splitCells';
 
 export function createCommands(context: PluginContext, OffsetMap: TableOffsetMapFactory) {
   return {

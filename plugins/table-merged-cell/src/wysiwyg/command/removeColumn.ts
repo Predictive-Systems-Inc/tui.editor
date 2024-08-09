@@ -1,6 +1,7 @@
-import type { PluginContext } from '@toast-ui/editor';
-import type { TableOffsetMapFactory, CommandFn } from '@t/index';
+import type { CommandFn, TableOffsetMapFactory } from '@t/index';
 import { getResolvedSelection, getRowAndColumnCount, setAttrs } from '../util';
+
+import type { PluginContext } from '@predictive-systems/editor';
 
 export function createRemoveColumnCommand(
   context: PluginContext,

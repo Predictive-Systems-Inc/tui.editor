@@ -5,7 +5,7 @@ import type {
   MdNode,
   PluginContext,
   PluginInfo,
-} from '@toast-ui/editor';
+} from '@predictive-systems/editor';
 import type { Selection } from 'prosemirror-state';
 import type { Node, ResolvedPos } from 'prosemirror-model';
 

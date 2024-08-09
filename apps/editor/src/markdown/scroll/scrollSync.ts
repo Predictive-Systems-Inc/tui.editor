@@ -1,19 +1,20 @@
-import { ProsemirrorNode } from 'prosemirror-model';
-import { EditorView } from 'prosemirror-view';
-import { ToastMark } from '@toast-ui/toastmark';
-import { Emitter } from '@t/event';
-import { isHTMLNode, getMdStartLine } from '@/utils/markdown';
-import MarkdownPreview from '../mdPreview';
-import MdEditor from '../mdEditor';
-import { animate } from './animation';
-import { getAndSaveOffsetInfo } from './offset';
 import {
-  getAdditionalPos,
   findAncestorHavingId,
+  getAdditionalPos,
   getEditorRangeHeightInfo,
   getParentNodeObj,
   getTotalOffsetTop,
 } from './dom';
+import { getMdStartLine, isHTMLNode } from '@/utils/markdown';
+
+import { EditorView } from 'prosemirror-view';
+import { Emitter } from '@t/event';
+import MarkdownPreview from '../mdPreview';
+import MdEditor from '../mdEditor';
+import { ProsemirrorNode } from 'prosemirror-model';
+import { ToastMark } from '@predictive-systems/toastmark';
+import { animate } from './animation';
+import { getAndSaveOffsetInfo } from './offset';
 
 const EDITOR_BOTTOM_PADDING = 18;
 

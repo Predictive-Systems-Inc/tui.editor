@@ -1,14 +1,11 @@
-import { oneLineTrim } from 'common-tags';
-
-import { DOMParser } from 'prosemirror-model';
-
-import WysiwygEditor from '@/wysiwyg/wwEditor';
-import EventEmitter from '@/event/eventEmitter';
 import CommandManager from '@/commands/commandManager';
+import { DOMParser } from 'prosemirror-model';
+import EventEmitter from '@/event/eventEmitter';
+import type { HTMLConvertorMap } from '@predictive-systems/toastmark';
 import { WwToDOMAdaptor } from '@/wysiwyg/adaptor/wwToDOMAdaptor';
+import WysiwygEditor from '@/wysiwyg/wwEditor';
 import { cls } from '@/utils/dom';
-
-import type { HTMLConvertorMap } from '@toast-ui/toastmark';
+import { oneLineTrim } from 'common-tags';
 
 const CODE_BLOCK_CLS = cls('ww-code-block');
 

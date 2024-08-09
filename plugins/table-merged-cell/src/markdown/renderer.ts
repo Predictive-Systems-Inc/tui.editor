@@ -1,6 +1,7 @@
-import type { CustomHTMLRenderer } from '@toast-ui/editor';
-import type { OpenTagToken } from '@toast-ui/toastmark';
 import { MergedTableCellMdNode, MergedTableRowMdNode } from '@t/index';
+
+import type { CustomHTMLRenderer } from '@predictive-systems/editor';
+import type { OpenTagToken } from '@predictive-systems/toastmark';
 
 export const toHTMLRenderers: CustomHTMLRenderer = {
   // @ts-ignore

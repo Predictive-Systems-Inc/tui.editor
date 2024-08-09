@@ -1,7 +1,7 @@
-import Editor from '@toast-ui/editor';
+import Editor from '@predictive-systems/editor';
 import colorPicker from 'tui-color-picker';
-import { oneLineTrim } from 'common-tags';
 import colorSyntaxPlugin from '@/index';
+import { oneLineTrim } from 'common-tags';
 import { removeProseMirrorHackNodes } from '@/utils/dom';
 
 function removeDataAttr(html: string) {

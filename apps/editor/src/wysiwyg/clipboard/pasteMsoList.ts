@@ -1,10 +1,10 @@
 import {
-  isElemNode,
+  appendNodes,
   findNodes,
+  insertBeforeNode,
+  isElemNode,
   removeNode,
   unwrapNode,
-  insertBeforeNode,
-  appendNodes,
 } from '@/utils/dom';
 
 const reMSOListClassName = /MsoListParagraph/;
@@ -31,7 +31,7 @@ export function isFromMso(html: string) {
 
 function getListItemContents(para: HTMLElement) {
   const removedNodes = [];
-  const walker = document.createTreeWalker(para, 1, null, false);
+  const walker = document.createTreeWalker(para, 1, null);
 
   while (walker.nextNode()) {
     const node = walker.currentNode;

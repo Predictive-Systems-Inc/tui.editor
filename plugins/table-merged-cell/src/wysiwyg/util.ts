@@ -1,7 +1,8 @@
-import type { ResolvedPos, Node, Schema } from 'prosemirror-model';
-import type { Selection } from 'prosemirror-state';
-import type { PluginContext } from '@toast-ui/editor';
 import type { CellSelection, SelectionInfo } from '@t/index';
+import type { Node, ResolvedPos, Schema } from 'prosemirror-model';
+
+import type { PluginContext } from '@predictive-systems/editor';
+import type { Selection } from 'prosemirror-state';
 
 export function findNodeBy(pos: ResolvedPos, condition: (node: Node, depth: number) => boolean) {
   let { depth } = pos;

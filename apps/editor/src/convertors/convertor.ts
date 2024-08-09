@@ -1,14 +1,12 @@
+import { HTMLConvertorMap, MdNode, MdPos } from '@predictive-systems/toastmark';
 import { Node as ProsemirrorNode, Schema } from 'prosemirror-model';
-import { HTMLConvertorMap, MdNode, MdPos } from '@toast-ui/toastmark';
+import { ToMdConvertorMap, ToMdConvertors, ToWwConvertorMap } from '@t/convertor';
 
-import { ToWwConvertorMap, ToMdConvertors, ToMdConvertorMap } from '@t/convertor';
 import { Emitter } from '@t/event';
-
-import { createWwConvertors } from './toWysiwyg/toWwConvertors';
-import ToWwConvertorState from './toWysiwyg/toWwConvertorState';
-
-import { createMdConvertors } from './toMarkdown/toMdConvertors';
 import ToMdConvertorState from './toMarkdown/toMdConvertorState';
+import ToWwConvertorState from './toWysiwyg/toWwConvertorState';
+import { createMdConvertors } from './toMarkdown/toMdConvertors';
+import { createWwConvertors } from './toWysiwyg/toWwConvertors';
 
 export default class Convertor {
   private readonly schema: Schema;

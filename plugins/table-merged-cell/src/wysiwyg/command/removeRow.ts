@@ -1,6 +1,7 @@
-import type { PluginContext } from '@toast-ui/editor';
-import type { TableOffsetMapFactory, TableOffsetMap, CommandFn } from '@t/index';
+import type { CommandFn, TableOffsetMap, TableOffsetMapFactory } from '@t/index';
 import { getResolvedSelection, getRowAndColumnCount, setAttrs } from '../util';
+
+import type { PluginContext } from '@predictive-systems/editor';
 
 function getRowRanges(map: TableOffsetMap, rowIdx: number) {
   const { totalColumnCount } = map;

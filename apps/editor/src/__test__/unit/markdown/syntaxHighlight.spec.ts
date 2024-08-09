@@ -1,6 +1,6 @@
-import { ToastMark } from '@toast-ui/toastmark';
-import MarkdownEditor from '@/markdown/mdEditor';
 import EventEmitter from '@/event/eventEmitter';
+import MarkdownEditor from '@/markdown/mdEditor';
+import { ToastMark } from '@predictive-systems/toastmark';
 import { source } from 'common-tags';
 
 function getEditorHTML(editor: MarkdownEditor) {

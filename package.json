@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -76,6 +76,8 @@
     "test": "node ./scripts/pkg-script.js --script test --type $type",
     "test:ci": "node ./scripts/pkg-script.js --script test:ci --type $type",
     "test:types": "node ./scripts/pkg-script.js --script test:types --type $type",
+    "serve:editor": "lerna run --stream --scope @predictive-systems/editor serve",
+    "serve:react-editor": "lerna run --stream --scope @predictive-systems/react-editor serve",
     "serve": "node ./scripts/pkg-script.js --script serve --type $type",
     "serve:ie": "node ./scripts/pkg-script.js --script serve:ie --type $type",
     "build": "node ./scripts/pkg-script.js --script build --type $type",

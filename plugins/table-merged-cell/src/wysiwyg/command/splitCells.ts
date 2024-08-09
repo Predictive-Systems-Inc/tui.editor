@@ -1,8 +1,9 @@
-import type { PluginContext } from '@toast-ui/editor';
-import type { TableOffsetMapFactory, TableOffsetMap, CommandFn, SelectionInfo } from '@t/index';
-import type { EditorView } from 'prosemirror-view';
-import type { Selection } from 'prosemirror-state';
+import type { CommandFn, SelectionInfo, TableOffsetMap, TableOffsetMapFactory } from '@t/index';
 import { getCellSelectionClass, getResolvedSelection, setAttrs } from '../util';
+
+import type { EditorView } from 'prosemirror-view';
+import type { PluginContext } from '@predictive-systems/editor';
+import type { Selection } from 'prosemirror-state';
 
 function getColspanEndIdx(rowIdx: number, colIdx: number, map: TableOffsetMap) {
   let endColIdx = colIdx;

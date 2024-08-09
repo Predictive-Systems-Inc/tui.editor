@@ -1,6 +1,6 @@
-import { oneLineTrim } from 'common-tags';
-import Editor from '@toast-ui/editor';
+import Editor from '@predictive-systems/editor';
 import mergedTableCellPlugin from '@/index';
+import { oneLineTrim } from 'common-tags';
 
 describe('convertor with merged table plugin', () => {
   let container: HTMLElement, editor: Editor;

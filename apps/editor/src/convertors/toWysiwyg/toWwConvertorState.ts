@@ -1,9 +1,9 @@
-import { Schema, Node, NodeType, Mark, MarkType, DOMParser } from 'prosemirror-model';
-import { MdNode } from '@toast-ui/toastmark';
+import { Attrs, InfoForPosSync, StackItem, ToWwConvertorMap } from '@t/convertor';
+import { DOMParser, Mark, MarkType, Node, NodeType, Schema } from 'prosemirror-model';
+import { getChildrenText, isContainer } from '@/utils/markdown';
 
-import { ToWwConvertorMap, StackItem, Attrs, InfoForPosSync } from '@t/convertor';
+import { MdNode } from '@predictive-systems/toastmark';
 import { last } from '@/utils/common';
-import { isContainer, getChildrenText } from '@/utils/markdown';
 
 export function mergeMarkText(a: Node, b: Node) {
   if (a.isText && b.isText && Mark.sameSet(a.marks, b.marks)) {

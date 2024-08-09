@@ -1,13 +1,14 @@
-import type { PluginContext, PluginInfo } from '@toast-ui/editor';
+import './css/plugin.css';
+
+import type { PluginContext, PluginInfo } from '@predictive-systems/editor';
+import { createOffsetMapMixin, offsetMapMixin } from '@/wysiwyg/tableOffsetMapMixin';
+
+import { addLangs } from '@/i18n/langs';
+import { addMergedTableContextMenu } from '@/wysiwyg/contextMenu';
+import { createCommands } from '@/wysiwyg/commandFactory';
 import { markdownParsers } from '@/markdown/parser';
 import { toHTMLRenderers } from '@/markdown/renderer';
 import { toMarkdownRenderers } from '@/wysiwyg/renderer';
-import { addLangs } from '@/i18n/langs';
-import { offsetMapMixin, createOffsetMapMixin } from '@/wysiwyg/tableOffsetMapMixin';
-import { addMergedTableContextMenu } from '@/wysiwyg/contextMenu';
-import { createCommands } from '@/wysiwyg/commandFactory';
-
-import './css/plugin.css';
 
 export default function tableMergedCellPlugin(context: PluginContext): PluginInfo {
   const { i18n, eventEmitter } = context;

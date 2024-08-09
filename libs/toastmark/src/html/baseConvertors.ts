@@ -1,12 +1,13 @@
-import { HTMLConvertorMap } from '@t/renderer';
 import {
-  Node,
-  HeadingNode,
   CodeBlockNode,
-  ListNode,
-  LinkNode,
   CustomBlockNode,
+  HeadingNode,
+  LinkNode,
+  ListNode,
+  Node,
 } from '../commonmark/node';
+
+import { HTMLConvertorMap } from '@t/renderer';
 import { escapeXml } from '../commonmark/common';
 import { filterDisallowedTags } from './tagFilter';
 
@@ -200,7 +201,7 @@ export const baseConvertors: HTMLConvertorMap = {
         return customConvertor!(node, context);
       } catch (e) {
         console.warn(
-          `[@toast-ui/editor] - The error occurred when ${info} block node was parsed in markdown renderer: ${e}`
+          `[@predictive-systems/editor] - The error occurred when ${info} block node was parsed in markdown renderer: ${e}`
         );
       }
     }
@@ -237,7 +238,7 @@ export const baseConvertors: HTMLConvertorMap = {
         return customConvertor!(node, context);
       } catch (e) {
         console.warn(
-          `[@toast-ui/editor] - The error occurred when ${nomalizedInfo} inline node was parsed in markdown renderer: ${e}`
+          `[@predictive-systems/editor] - The error occurred when ${nomalizedInfo} inline node was parsed in markdown renderer: ${e}`
         );
       }
     }

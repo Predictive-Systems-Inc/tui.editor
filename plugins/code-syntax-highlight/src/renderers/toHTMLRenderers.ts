@@ -1,5 +1,6 @@
-import type { MdNode, CodeBlockMdNode } from '@toast-ui/editor';
-import type { HTMLToken } from '@toast-ui/toastmark';
+import type { CodeBlockMdNode, MdNode } from '@predictive-systems/editor';
+
+import type { HTMLToken } from '@predictive-systems/toastmark';
 import { PrismJs } from '@t/index';
 
 const BACKTICK_COUNT = 3;

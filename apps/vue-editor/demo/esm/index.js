@@ -1,6 +1,7 @@
-import Vue from 'vue/dist/vue.esm.browser';
+import '@predictive-systems/editor/dist/toastui-editor.css';
+
 import { Editor } from '/dist/index.js';
-import '@toast-ui/editor/dist/toastui-editor.css';
+import Vue from 'vue/dist/vue.esm.browser';
 
 Vue.component('editor', Editor);
 

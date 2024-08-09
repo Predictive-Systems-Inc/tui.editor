@@ -1,17 +1,17 @@
-import { ToastMark } from '@toast-ui/toastmark';
-import forEachOwnProperties from 'tui-code-snippet/collection/forEachOwnProperties';
-import extend from 'tui-code-snippet/object/extend';
-import on from 'tui-code-snippet/domEvent/on';
-import off from 'tui-code-snippet/domEvent/off';
-
 import { CustomHTMLRenderer, ViewerOptions } from '@t/editor';
 import { Emitter, Handler } from '@t/event';
-import MarkdownPreview from './markdown/mdPreview';
-import { getPluginInfo } from './helper/plugin';
-import { last, sanitizeLinkAttribute } from './utils/common';
-import EventEmitter from './event/eventEmitter';
 import { cls, isPositionInBox, toggleClass } from './utils/dom';
+import { last, sanitizeLinkAttribute } from './utils/common';
 import { registerTagWhitelistIfPossible, sanitizeHTML } from './sanitizer/htmlSanitizer';
+
+import EventEmitter from './event/eventEmitter';
+import MarkdownPreview from './markdown/mdPreview';
+import { ToastMark } from '@predictive-systems/toastmark';
+import extend from 'tui-code-snippet/object/extend';
+import forEachOwnProperties from 'tui-code-snippet/collection/forEachOwnProperties';
+import { getPluginInfo } from './helper/plugin';
+import off from 'tui-code-snippet/domEvent/off';
+import on from 'tui-code-snippet/domEvent/on';
 
 const TASK_ATTR_NAME = 'data-task';
 const DISABLED_TASK_ATTR_NAME = 'data-task-disabled';

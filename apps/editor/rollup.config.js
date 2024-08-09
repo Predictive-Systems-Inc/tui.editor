@@ -1,15 +1,16 @@
-import typescript from '@rollup/plugin-typescript';
-import commonjs from '@rollup/plugin-commonjs';
-import { nodeResolve } from '@rollup/plugin-node-resolve';
-import fs from 'fs';
+import { author, license, version } from './package.json';
+
 import banner from 'rollup-plugin-banner';
-import { version, author, license } from './package.json';
+import commonjs from '@rollup/plugin-commonjs';
+import fs from 'fs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import typescript from '@rollup/plugin-typescript';
 
 function i18nEditorImportPath() {
   return {
     name: 'i18nEditorImportPath',
     transform(code) {
-      return code.replace('../editorCore', '@toast-ui/editor');
+      return code.replace('../editorCore', '@predictive-systems/editor');
     },
   };
 }
@@ -19,7 +20,7 @@ const fileNames = fs.readdirSync('./src/i18n');
 function createBannerPlugin(type) {
   return banner(
     [
-      `@toast-ui/editor${type ? ` : ${type}` : ''}`,
+      `@predictive-systems/editor${type ? ` : ${type}` : ''}`,
       `@version ${version} | ${new Date().toDateString()}`,
       `@author ${author}`,
       `@license ${license}`,
@@ -58,7 +59,7 @@ export default [
       format: 'es',
       sourcemap: false,
     },
-    external: ['@toast-ui/editor'],
+    external: ['@predictive-systems/editor'],
     plugins: [
       typescript(),
       commonjs(),

@@ -1,9 +1,9 @@
-import { oneLineTrim } from 'common-tags';
-import { HTMLConvertorMap } from '@toast-ui/toastmark';
+import EventEmitter from '@/event/eventEmitter';
+import { HTMLConvertorMap } from '@predictive-systems/toastmark';
 import { ToDOMAdaptor } from '@t/convertor';
 import { WwToDOMAdaptor } from '@/wysiwyg/adaptor/wwToDOMAdaptor';
 import WysiwygEditor from '@/wysiwyg/wwEditor';
-import EventEmitter from '@/event/eventEmitter';
+import { oneLineTrim } from 'common-tags';
 
 let wwe: WysiwygEditor, em: EventEmitter, toDOMAdaptor: ToDOMAdaptor;
 

@@ -1,12 +1,14 @@
 import 'jest-canvas-mock';
-import { PluginOptions } from '@t/index';
+
 import {
-  parseToChartOption,
-  parseToChartData,
-  detectDelimiter,
-  setDefaultOptions,
   ChartOptions,
+  detectDelimiter,
+  parseToChartData,
+  parseToChartOption,
+  setDefaultOptions,
 } from '@/index';
+
+import { PluginOptions } from '@t/index';
 
 describe('parseToChartOption()', () => {
   it('should parse option code into object', () => {
@@ -118,7 +120,7 @@ describe('parseToChartOption()', () => {
 });
 
 describe('parseToChartData()', () => {
-  it('should parse csv to @toast-ui/chart data format', () => {
+  it('should parse csv to @predictive-systems/chart data format', () => {
     expect(
       parseToChartData(
         `
@@ -143,7 +145,7 @@ describe('parseToChartData()', () => {
     });
   });
 
-  it('should parse tsv to @toast-ui/chart data format', () => {
+  it('should parse tsv to @predictive-systems/chart data format', () => {
     expect(
       parseToChartData(
         `
@@ -168,7 +170,7 @@ describe('parseToChartData()', () => {
     });
   });
 
-  it('should parse whitespace separated values to @toast-ui/chart data format', () => {
+  it('should parse whitespace separated values to @predictive-systems/chart data format', () => {
     expect(
       parseToChartData(
         ['\t"series a" "series b"', '"category 1" 1.234 2.345', '"category 2" 3.456 4.567'].join(
@@ -191,7 +193,7 @@ describe('parseToChartData()', () => {
     });
   });
 
-  it('should parse data with legends to @toast-ui/chart data format', () => {
+  it('should parse data with legends to @predictive-systems/chart data format', () => {
     expect(
       parseToChartData(
         `
@@ -216,7 +218,7 @@ describe('parseToChartData()', () => {
     });
   });
 
-  it('should parse data with categories to @toast-ui/chart data format', () => {
+  it('should parse data with categories to @predictive-systems/chart data format', () => {
     expect(
       parseToChartData(
         `

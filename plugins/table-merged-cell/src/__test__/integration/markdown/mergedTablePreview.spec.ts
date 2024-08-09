@@ -1,6 +1,6 @@
-import { source } from 'common-tags';
-import Editor from '@toast-ui/editor';
+import Editor from '@predictive-systems/editor';
 import mergedTableCellPlugin from '@/index';
+import { source } from 'common-tags';
 
 describe('markdown merged table plugin', () => {
   let container: HTMLElement, editor: Editor;

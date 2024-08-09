@@ -1,7 +1,8 @@
+import '@predictive-systems/editor/dist/toastui-editor.css';
+
+import { Editor } from '/dist/index.js';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Editor } from '/dist/index.js';
-import '@toast-ui/editor/dist/toastui-editor.css';
 
 const content = [
   '![image](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)',

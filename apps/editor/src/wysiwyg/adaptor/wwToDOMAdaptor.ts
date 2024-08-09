@@ -8,15 +8,16 @@ import {
   RawHTMLToken,
   Renderer,
   TextToken,
-} from '@toast-ui/toastmark';
-import { ProsemirrorNode, Mark } from 'prosemirror-model';
-import isArray from 'tui-code-snippet/type/isArray';
-import { getHTMLRenderConvertors } from '@/markdown/htmlRenderConvertors';
-import { ToDOMAdaptor } from '@t/convertor';
-import { includes, last } from '@/utils/common';
+} from '@predictive-systems/toastmark';
 import { CustomHTMLRenderer, LinkAttributes } from '@t/editor';
-import { setAttributes } from '@/utils/dom';
+import { Mark, ProsemirrorNode } from 'prosemirror-model';
 import { createMdLikeNode, isContainer, isPmNode } from './mdLikeNode';
+import { includes, last } from '@/utils/common';
+
+import { ToDOMAdaptor } from '@t/convertor';
+import { getHTMLRenderConvertors } from '@/markdown/htmlRenderConvertors';
+import isArray from 'tui-code-snippet/type/isArray';
+import { setAttributes } from '@/utils/dom';
 
 interface TokenToDOM<T> {
   openTag: (token: HTMLToken, stack: T[]) => void;

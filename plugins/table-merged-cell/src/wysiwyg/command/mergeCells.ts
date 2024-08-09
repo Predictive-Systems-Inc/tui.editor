@@ -1,6 +1,4 @@
-import type { Transaction } from 'prosemirror-state';
-import type { PluginContext } from '@toast-ui/editor';
-import type { TableOffsetMapFactory, TableOffsetMap, CommandFn } from '@t/index';
+import type { CommandFn, TableOffsetMap, TableOffsetMapFactory } from '@t/index';
 import type { Fragment, Node } from 'prosemirror-model';
 import {
   getCellSelectionClass,
@@ -8,6 +6,9 @@ import {
   getRowAndColumnCount,
   setAttrs,
 } from '../util';
+
+import type { PluginContext } from '@predictive-systems/editor';
+import type { Transaction } from 'prosemirror-state';
 
 interface RangeInfo {
   startNode: Node;

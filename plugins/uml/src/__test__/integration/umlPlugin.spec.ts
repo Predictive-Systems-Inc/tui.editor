@@ -2,7 +2,8 @@
  * @fileoverview Test uml plugin
  * @author NHN FE Development Lab <dl_javascript@nhn.com>
  */
-import Editor from '@toast-ui/editor';
+
+import Editor from '@predictive-systems/editor';
 import umlPlugin from '@/index';
 
 function removeDataAttr(html: string) {

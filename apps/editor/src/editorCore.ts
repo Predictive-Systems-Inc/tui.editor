@@ -1,13 +1,3 @@
-import { DOMParser } from 'prosemirror-model';
-import forEachOwnProperties from 'tui-code-snippet/collection/forEachOwnProperties';
-import extend from 'tui-code-snippet/object/extend';
-import css from 'tui-code-snippet/domUtil/css';
-import addClass from 'tui-code-snippet/domUtil/addClass';
-import removeClass from 'tui-code-snippet/domUtil/removeClass';
-import isString from 'tui-code-snippet/type/isString';
-import isNumber from 'tui-code-snippet/type/isNumber';
-
-import { Emitter, Handler } from '@t/event';
 import {
   Base,
   EditorOptions,
@@ -17,34 +7,39 @@ import {
   ViewerOptions,
   WidgetStyle,
 } from '@t/editor';
-import { PluginCommandMap, PluginInfoResult, CommandFn } from '@t/plugin';
+import { CommandFn, PluginCommandMap, PluginInfoResult } from '@t/plugin';
+import { Emitter, Handler } from '@t/event';
+import { cls, removeProseMirrorHackNodes, replaceBRWithEmptyBlock } from './utils/dom';
+import { deepMergedCopy, sanitizeLinkAttribute, sendHostName } from './utils/common';
+import { getEditorToMdPos, getMdToEditorPos } from './markdown/helper/pos';
+import i18n, { I18n } from './i18n/i18n';
 
-import { sendHostName, sanitizeLinkAttribute, deepMergedCopy } from './utils/common';
-
-import MarkdownEditor from './markdown/mdEditor';
-import MarkdownPreview from './markdown/mdPreview';
-
-import WysiwygEditor from './wysiwyg/wwEditor';
-
-import EventEmitter from './event/eventEmitter';
 import CommandManager from './commands/commandManager';
 import Convertor from './convertors/convertor';
-import Viewer from './viewer';
-import i18n, { I18n } from './i18n/i18n';
-import { getPluginInfo } from './helper/plugin';
-
-import { ToastMark } from '@toast-ui/toastmark';
-import { WwToDOMAdaptor } from './wysiwyg/adaptor/wwToDOMAdaptor';
-import { ScrollSync } from './markdown/scroll/scrollSync';
-import { addDefaultImageBlobHook } from './helper/image';
-import { setWidgetRules } from './widget/rules';
-import { cls, removeProseMirrorHackNodes, replaceBRWithEmptyBlock } from './utils/dom';
-import { sanitizeHTML } from './sanitizer/htmlSanitizer';
-import { createHTMLSchemaMap } from './wysiwyg/nodes/html';
-import { getHTMLRenderConvertors } from './markdown/htmlRenderConvertors';
-import { buildQuery } from './queries/queryManager';
-import { getEditorToMdPos, getMdToEditorPos } from './markdown/helper/pos';
+import { DOMParser } from 'prosemirror-model';
+import EventEmitter from './event/eventEmitter';
+import MarkdownEditor from './markdown/mdEditor';
+import MarkdownPreview from './markdown/mdPreview';
 import { Pos } from '@t/toastmark';
+import { ScrollSync } from './markdown/scroll/scrollSync';
+import { ToastMark } from '@predictive-systems/toastmark';
+import Viewer from './viewer';
+import { WwToDOMAdaptor } from './wysiwyg/adaptor/wwToDOMAdaptor';
+import WysiwygEditor from './wysiwyg/wwEditor';
+import addClass from 'tui-code-snippet/domUtil/addClass';
+import { addDefaultImageBlobHook } from './helper/image';
+import { buildQuery } from './queries/queryManager';
+import { createHTMLSchemaMap } from './wysiwyg/nodes/html';
+import css from 'tui-code-snippet/domUtil/css';
+import extend from 'tui-code-snippet/object/extend';
+import forEachOwnProperties from 'tui-code-snippet/collection/forEachOwnProperties';
+import { getHTMLRenderConvertors } from './markdown/htmlRenderConvertors';
+import { getPluginInfo } from './helper/plugin';
+import isNumber from 'tui-code-snippet/type/isNumber';
+import isString from 'tui-code-snippet/type/isString';
+import removeClass from 'tui-code-snippet/domUtil/removeClass';
+import { sanitizeHTML } from './sanitizer/htmlSanitizer';
+import { setWidgetRules } from './widget/rules';
 
 /**
  * ToastUIEditorCore

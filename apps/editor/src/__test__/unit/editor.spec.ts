@@ -1,15 +1,18 @@
 import '@/i18n/en-us';
-import { oneLineTrim, stripIndents, source } from 'common-tags';
-import { Emitter } from '@t/event';
-import { EditorOptions } from '@t/editor';
-import type { OpenTagToken } from '@toast-ui/toastmark';
-import i18n from '@/i18n/i18n';
-import Editor from '@/editor';
-import Viewer from '@/viewer';
+
 import * as commonUtil from '@/utils/common';
-import { createHTMLrenderer } from './markdown/util';
-import { cls } from '@/utils/dom';
 import * as imageHelper from '@/helper/image';
+
+import { oneLineTrim, source, stripIndents } from 'common-tags';
+
+import Editor from '@/editor';
+import { EditorOptions } from '@t/editor';
+import { Emitter } from '@t/event';
+import type { OpenTagToken } from '@predictive-systems/toastmark';
+import Viewer from '@/viewer';
+import { cls } from '@/utils/dom';
+import { createHTMLrenderer } from './markdown/util';
+import i18n from '@/i18n/i18n';
 
 const HEADING_CLS = `${cls('md-heading')} ${cls('md-heading1')}`;
 const DELIM_CLS = cls('md-delimiter');

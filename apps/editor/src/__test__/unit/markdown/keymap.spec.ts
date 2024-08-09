@@ -1,18 +1,20 @@
-import { oneLineTrim, source, stripIndent } from 'common-tags';
-import { redo, undo } from 'prosemirror-history';
+import * as keymaps from 'prosemirror-keymap';
+
+import { Sourcepos, ToastMark } from '@predictive-systems/toastmark';
+import { TestEditorWithNoneDelayHistory, getTextContent, removeDataAttr } from './util';
 import {
   chainCommands,
   deleteSelection,
   joinBackward,
   selectNodeBackward,
 } from 'prosemirror-commands';
-import * as keymaps from 'prosemirror-keymap';
-import { Sourcepos, ToastMark } from '@toast-ui/toastmark';
+import { oneLineTrim, source, stripIndent } from 'common-tags';
+import { redo, undo } from 'prosemirror-history';
+
+import EventEmitter from '@/event/eventEmitter';
 import MarkdownEditor from '@/markdown/mdEditor';
 import MarkdownPreview from '@/markdown/mdPreview';
-import EventEmitter from '@/event/eventEmitter';
 import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
-import { getTextContent, removeDataAttr, TestEditorWithNoneDelayHistory } from './util';
 
 // @TODO: all tests should move to e2e test
 

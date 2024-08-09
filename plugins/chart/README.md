@@ -2,7 +2,7 @@
 
 > This is a plugin of [TOAST UI Editor](https://github.com/nhn/tui.editor/tree/master/apps/editor) to render chart.
 
-[![npm version](https://img.shields.io/npm/v/@toast-ui/editor-plugin-chart.svg)](https://www.npmjs.com/package/@toast-ui/editor-plugin-chart)
+[![npm version](https://img.shields.io/npm/v/@predictive-systems/editor-plugin-chart.svg)](https://www.npmjs.com/package/@predictive-systems/editor-plugin-chart)
 
 ![chart](https://user-images.githubusercontent.com/37766175/121808323-d8d41000-cc92-11eb-9117-b92a435c9b43.png)
 
@@ -18,7 +18,7 @@
 
 ```
 - node_modules/
-  - @toast-ui/
+  - @predictive-systems/
     - editor-plugin-chart/
       - dist/
         - toastui-editor-plugin-chart.js
@@ -38,14 +38,14 @@ The bundle files include all dependencies of this plugin.
 
 ## 📦 Usage npm
 
-To use the plugin, [`@toast-ui/editor`](https://github.com/nhn/tui.editor/tree/master/apps/editor) must be installed.
+To use the plugin, [`@predictive-systems/editor`](https://github.com/nhn/tui.editor/tree/master/apps/editor) must be installed.
 
 > Ref. [Getting Started](https://github.com/nhn/tui.editor/blob/master/docs/en/getting-started.md)
 
 ### Install
 
 ```sh
-$ npm install @toast-ui/editor-plugin-chart
+$ npm install @predictive-systems/editor-plugin-chart
 ```
 
 ### Import Plugin
@@ -55,17 +55,17 @@ Along with the plugin, the plugin's dependency style must be imported. The `char
 #### ES Modules
 
 ```js
-import '@toast-ui/chart/dist/toastui-chart.css';
+import '@predictive-systems/chart/dist/toastui-chart.css';
 
-import chart from '@toast-ui/editor-plugin-chart';
+import chart from '@predictive-systems/editor-plugin-chart';
 ```
 
 #### CommonJS
 
 ```js
-require('@toast-ui/chart/dist/toastui-chart.css');
+require('@predictive-systems/chart/dist/toastui-chart.css');
 
-const chart = require('@toast-ui/editor-plugin-chart');
+const chart = require('@predictive-systems/editor-plugin-chart');
 ```
 
 ### Create Instance
@@ -74,10 +74,10 @@ const chart = require('@toast-ui/editor-plugin-chart');
 
 ```js
 // ...
-import '@toast-ui/chart/dist/toastui-chart.css';
+import '@predictive-systems/chart/dist/toastui-chart.css';
 
-import Editor from '@toast-ui/editor';
-import chart from '@toast-ui/editor-plugin-chart';
+import Editor from '@predictive-systems/editor';
+import chart from '@predictive-systems/editor-plugin-chart';
 
 const editor = new Editor({
   // ...
@@ -89,10 +89,10 @@ const editor = new Editor({
 
 ```js
 // ...
-import '@toast-ui/chart/dist/toastui-chart.css';
+import '@predictive-systems/chart/dist/toastui-chart.css';
 
-import Viewer from '@toast-ui/editor/dist/toastui-editor-viewer';
-import chart from '@toast-ui/editor-plugin-chart';
+import Viewer from '@predictive-systems/editor/dist/toastui-editor-viewer';
+import chart from '@predictive-systems/editor-plugin-chart';
 
 const viewer = new Viewer({
   // ...
@@ -104,10 +104,10 @@ or
 
 ```js
 // ...
-import '@toast-ui/chart/dist/toastui-chart.css';
+import '@predictive-systems/chart/dist/toastui-chart.css';
 
-import Editor from '@toast-ui/editor';
-import chart from '@toast-ui/editor-plugin-chart';
+import Editor from '@predictive-systems/editor';
+import chart from '@predictive-systems/editor-plugin-chart';
 
 const viewer = Editor.factory({
   // ...
@@ -118,7 +118,7 @@ const viewer = Editor.factory({
 
 ## 🗂 Usage CDN
 
-To use the plugin, the CDN files(CSS, Script) of `@toast-ui/editor` must be included.
+To use the plugin, the CDN files(CSS, Script) of `@predictive-systems/editor` must be included.
 
 ### Include Files
 
@@ -198,10 +198,10 @@ These options are used to set the dimensions of the chart drawn in the editor.
 
 ```js
 // ...
-import '@toast-ui/chart/dist/toastui-chart.css';
+import '@predictive-systems/chart/dist/toastui-chart.css';
 
-import Editor from '@toast-ui/editor';
-import chart from '@toast-ui/editor-plugin-chart';
+import Editor from '@predictive-systems/editor';
+import chart from '@predictive-systems/editor-plugin-chart';
 
 const chartOptions = {
   minWidth: 100,

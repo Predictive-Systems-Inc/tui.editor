@@ -1,11 +1,12 @@
 import {
-  LanguageSelectBox,
-  WRAPPER_CLASS_NAME,
   INPUT_CLASS_NANE,
   LIST_CLASS_NAME,
+  LanguageSelectBox,
+  WRAPPER_CLASS_NAME,
 } from '@/nodeViews/languageSelectBox';
+
+import type { Emitter } from '@predictive-systems/editor';
 import { cls } from '@/utils/dom';
-import type { Emitter } from '@toast-ui/editor';
 
 Element.prototype.scrollIntoView = jest.fn();
 

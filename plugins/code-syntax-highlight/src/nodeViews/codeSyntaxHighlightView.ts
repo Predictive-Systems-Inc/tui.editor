@@ -1,12 +1,11 @@
 import type { EditorView, NodeView } from 'prosemirror-view';
-import type { Node as ProsemirrorNode } from 'prosemirror-model';
 
-import isFunction from 'tui-code-snippet/type/isFunction';
-import addClass from 'tui-code-snippet/domUtil/addClass';
-
-import { cls } from '@/utils/dom';
+import type { Emitter } from '@predictive-systems/editor';
 import { LanguageSelectBox } from '@/nodeViews/languageSelectBox';
-import type { Emitter } from '@toast-ui/editor';
+import type { Node as ProsemirrorNode } from 'prosemirror-model';
+import addClass from 'tui-code-snippet/domUtil/addClass';
+import { cls } from '@/utils/dom';
+import isFunction from 'tui-code-snippet/type/isFunction';
 
 type GetPos = (() => number) | boolean;
 

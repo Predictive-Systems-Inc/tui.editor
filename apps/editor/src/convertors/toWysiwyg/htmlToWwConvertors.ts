@@ -1,13 +1,13 @@
-import { MdNode } from '@toast-ui/toastmark';
-import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
-
 import {
-  HTMLToWwConvertorMap,
   FlattenHTMLToWwConvertorMap,
+  HTMLToWwConvertorMap,
   ToWwConvertorState,
 } from '@t/convertor';
+
+import { MdNode } from '@predictive-systems/toastmark';
 import { includes } from '@/utils/common';
 import { reHTMLTag } from '@/utils/constants';
+import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
 
 export function getTextWithoutTrailingNewline(text: string) {
   return text[text.length - 1] === '\n' ? text.slice(0, text.length - 1) : text;

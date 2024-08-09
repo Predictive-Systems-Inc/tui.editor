@@ -1,18 +1,15 @@
-import { source, oneLineTrim } from 'common-tags';
-
-import { Context, MdNode, Parser, HTMLConvertorMap } from '@toast-ui/toastmark';
-
+import { Context, HTMLConvertorMap, MdNode, Parser } from '@predictive-systems/toastmark';
+import { MarkInfo, NodeInfo, ToMdConvertorContext, ToMdConvertorMap } from '@t/convertor';
 import { Node, Schema } from 'prosemirror-model';
-import { createSpecs } from '@/wysiwyg/specCreator';
+import { oneLineTrim, source } from 'common-tags';
 
 import Convertor from '@/convertors/convertor';
-import { WwToDOMAdaptor } from '@/wysiwyg/adaptor/wwToDOMAdaptor';
 import EventEmitter from '@/event/eventEmitter';
-
-import { ToMdConvertorMap, ToMdConvertorContext, NodeInfo, MarkInfo } from '@t/convertor';
+import { WwToDOMAdaptor } from '@/wysiwyg/adaptor/wwToDOMAdaptor';
 import { createHTMLSchemaMap } from '@/wysiwyg/nodes/html';
-import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
 import { createHTMLrenderer } from './markdown/util';
+import { createSpecs } from '@/wysiwyg/specCreator';
+import { sanitizeHTML } from '@/sanitizer/htmlSanitizer';
 
 function createSchema() {
   const specs = createSpecs({});
